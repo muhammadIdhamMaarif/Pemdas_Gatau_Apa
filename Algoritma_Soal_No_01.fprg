@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Algoritma_Soal_No_2"/>
+        <attribute name="authors" value="Acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-15 10:05:36 AM"/>
+        <attribute name="created" value="QWNlcjtBQ0hFUk9OOzIwMjQtMTAtMTU7MDk6NTI6MTcgQU07MjE1OQ=="/>
+        <attribute name="edited" value="QWNlcjtBQ0hFUk9OOzIwMjQtMTAtMTU7MTA6MDU6MzYgQU07MTsyMjU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilih" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan Operasi yang Ingin Dipilih &quot;" newline="True"/>
+            <output expression="&quot;1. Luas Persegi&quot;" newline="True"/>
+            <output expression="&quot;2. Luas Persegi Panjang&quot;" newline="True"/>
+            <output expression="&quot;3. Luas Lingkaran&quot;" newline="True"/>
+            <output expression="&quot;4. X pangkat N&quot;" newline="True"/>
+            <output expression="&quot;5. Nilai rata-rata dari n-bilangan&quot;" newline="True"/>
+            <output expression="&quot;Masukkan Pilihan Operasi: &quot;" newline="True"/>
+            <input variable="pilih"/>
+            <if expression="pilih == 1">
+                <then>
+                    <declare name="sisi" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Masukkan Panjang Sisi: &quot;" newline="True"/>
+                    <input variable="sisi"/>
+                    <output expression="&quot;Panjang Persegi Adalah: &quot;" newline="False"/>
+                    <output expression="sisi*sisi" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="pilih == 2">
+                <then>
+                    <declare name="panjang, lebar" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Masukkan Panjang: &quot;" newline="False"/>
+                    <input variable="panjang"/>
+                    <output expression="&quot;Masukkan Lebar: &quot;" newline="False"/>
+                    <input variable="lebar"/>
+                    <output expression="&quot;Luas Persegi Panjang Adalah: &quot;" newline="False"/>
+                    <output expression="panjang*lebar" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="pilih == 3">
+                <then>
+                    <declare name="radius" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Masukkan Radius Lingkaran: &quot;" newline="False"/>
+                    <input variable="radius"/>
+                    <output expression="&quot;Luas Lingakran Adalah: &quot;" newline="False"/>
+                    <output expression="pi*radius*radius" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="pilih == 4">
+                <then>
+                    <declare name="x, n, hasil, i" type="Integer" array="False" size=""/>
+                    <assign variable="hasil" expression="x"/>
+                    <for variable="i" start="0" end="n - 2" direction="inc" step="1">
+                        <assign variable="hasil" expression="hasil * x"/>
+                    </for>
+                    <output expression="&quot;X Pangkat N adalah: &quot;" newline="False"/>
+                    <output expression="hasil" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="pilih == 5">
+                <then>
+                    <declare name="index, totalhasil, k" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Masukkan Total Angka: &quot;" newline="False"/>
+                    <assign variable="totalhasil" expression="0"/>
+                    <input variable="index"/>
+                    <for variable="k" start="0" end="index - 1" direction="inc" step="1">
+                        <declare name="masukan" type="Integer" array="False" size=""/>
+                        <output expression="&quot;Masukkan Angka: &quot;" newline="False"/>
+                        <input variable="masukan"/>
+                        <assign variable="totalhasil" expression="totalhasil + masukan"/>
+                    </for>
+                    <output expression="&quot;Hasil Rata-Rata Adalah: &quot;" newline="False"/>
+                    <output expression="totalhasil / index" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

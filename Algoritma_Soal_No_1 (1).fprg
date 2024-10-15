@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Algoritma_Soal_No_1"/>
+        <attribute name="authors" value="Acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-15 09:49:44 AM"/>
+        <attribute name="created" value="QWNlcjtBQ0hFUk9OOzIwMjQtMTAtMTU7MDk6Mzg6MzYgQU07MjE2NA=="/>
+        <attribute name="edited" value="QWNlcjtBQ0hFUk9OOzIwMjQtMTAtMTU7MDk6NDk6NDQgQU07MTsyMjcz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kalimat" type="String" array="False" size=""/>
+            <declare name="ch" type="String" array="False" size=""/>
+            <input variable="kalimat"/>
+            <input variable="ch"/>
+            <declare name="panjang, i" type="Integer" array="False" size=""/>
+            <assign variable="panjang" expression="Len(kalimat)"/>
+            <declare name="ketemu" type="Boolean" array="False" size=""/>
+            <assign variable="ketemu" expression="false"/>
+            <for variable="i" start="0" end="panjang - 1" direction="inc" step="1">
+                <if expression="Char(kalimat, i) == ch">
+                    <then>
+                        <assign variable="ketemu" expression="true"/>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="!ketemu">
+                <then>
+                    <output expression="-1" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
